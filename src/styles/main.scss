@@ -1,0 +1,93 @@
+@import "svg.scss";
+$base-color: #F4EDC3;
+$font-color: #16394C;
+$secondary-color: #DDA943;
+$accent-color: #D32A2D;
+
+body {
+    background: $base-color;
+    font-family: liquorstore-jazz, sans-serif;
+    color: $font-color;
+    width: 100%;
+}
+
+header {
+    height: 3em;
+    svg {
+        height: 100%;
+    }
+}
+
+.wrapper {
+
+    overflow: hidden;
+    width: 100vw;
+    div {
+        text-align: center;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin: 1.5em 0 1em;
+    }
+}
+
+.circle-container {
+    svg {
+        z-index: -1;
+        position: absolute;
+        overflow: visible;
+        left: 50%;
+        margin-left: -50px;
+        top: 100%;
+        margin-top: -50px;
+        circle {
+            fill: $secondary-color
+        }
+    }
+}
+
+.cat-container {
+    margin: 4em 0;
+}
+
+.triangles-container {
+    list-style: none;
+    svg {
+        .red {
+            fill: $accent-color
+        }
+        .yellow {
+            fill: $secondary-color
+        }
+    }
+}
+
+
+
+.input {
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+        border: none;
+        box-shadow: 5px 5px 3px rgba(0,0,0,.1);
+        width: 90%;
+    }
+}
+
+.submit, button {
+    background: $accent-color;
+        color: white;
+        border: none;
+        border-radius: .2em;
+        font-family: liquorstore-jazz, sans-serif;
+        padding: .2em .4em;
+        font-size: 2em;
+        cursor: pointer;
+        margin-top: 1em;
+}
