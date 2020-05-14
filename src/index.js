@@ -11,8 +11,9 @@ document.addEventListener("submit",(e) => {
     e.preventDefault()
     
     const poem =  get("poem")
+    console.log(e.target["text-input"].value)
 
-    poem.children[0].textContent = 
+    // poem.children[0].textContent = swapper.replace()
 
     get("form").classList.toggle("seen")
     poem.classList.toggle("seen")
