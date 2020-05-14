@@ -10,7 +10,7 @@ const swapper = new NounSwapper();
 document.addEventListener("submit",(e) => {
     e.preventDefault()
     
-    const poem =  get("poem")
+    const poem = get("poem")
     console.log(e.target["text-input"].value)
 
     poem.children[0].textContent = swapper.replace(e.target["text-input"].value, ["nn"])
@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     get("read-btn").addEventListener("click", () => {
-
+        console.log(get("poem").children[0].textContent)
+        PoemReader.readPoem(get("poem").children[0].textContent)
     })
     
 })

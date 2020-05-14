@@ -1,19 +1,21 @@
+import * as responsiveVoice from "responsive-voice-node"
+
 export default class PoemReader {
    constructor() {}
 
    static readPoem(text) {
-      let voice = document.getElementById('voicesDropdown').value;
-      let sound = document.getElementById('bongoDropdown').value;
-      if (sound === 'true') {
+      // let voice = document.getElementById('voicesDropdown').value;
+      // let sound = document.getElementById('bongoDropdown').value;
+      // if (sound === 'true') {
          const lines = PoemReader.splitLines(text);
          console.log(lines);
          let audio = document.getElementById('start-bongos');
          const pause = (audio.duration - 1) * 1000;
          audio.play();
-         PoemReader.readLines(lines, pause, 'true', voice);
-      } else {
-         PoemReader.readLines([text], 0, sound, voice);
-      }
+         PoemReader.readLines(lines, pause, 'true');
+      // } else {
+      //    PoemReader.readLines([text], 0, sound, voice);
+      // }
    }
 
    static readLines(text, pause = 0, sound, voice = 'US English Female') {
