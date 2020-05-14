@@ -1,3 +1,5 @@
+import {RiString} from "rita"
+
 export default class NounSwapper {
    constructor() {
    

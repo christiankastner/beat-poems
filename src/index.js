@@ -13,7 +13,7 @@ document.addEventListener("submit",(e) => {
     const poem =  get("poem")
     console.log(e.target["text-input"].value)
 
-    // poem.children[0].textContent = swapper.replace()
+    poem.children[0].textContent = swapper.replace(e.target["text-input"].value, ["nn"])
 
     get("form").classList.toggle("seen")
     poem.classList.toggle("seen")
