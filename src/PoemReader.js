@@ -65,7 +65,7 @@ export default class PoemReader {
    }
 
    static playFiller() {
-      const ranNum = Math.ceil(Math.random() * 5);
+      const ranNum = Math.ceil(Math.random() * 3);
       const bongos = [
          document.getElementById(`end-bongos-1`),
          document.getElementById(`end-bongos-2`),
