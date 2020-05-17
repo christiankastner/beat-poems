@@ -11,13 +11,11 @@ document.addEventListener("submit",(e) => {
     e.preventDefault()
     
     const poem = get("poem")
-    console.log(e.target["text-input"].value)
 
     poem.children[0].textContent = swapper.replace(e.target["text-input"].value, ["nn"])
 
-    get("form").classList.toggle("seen")
+    get("form-container").classList.toggle("seen")
     poem.classList.toggle("seen")
-
 })
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -28,6 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //     circle.setAttribute("height", window.innerWidth)
     //     console.log(circle.attributes)
     // }, false)
+
+    const readBtn = get("read-btn")
+    const stopBtn = get("stop-btn")
 
     get("start-bongos").addEventListener("play", () => {
         bongoFor(2.3)
@@ -43,6 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     get("read-btn").addEventListener("click", () => {
         PoemReader.readPoem(get("poem").children[0].textContent)
+    })
+
+    stopBtn.addEventListener("click", () => {
+        PoemReader.killSound()
+        
     })
     
 })

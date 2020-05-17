@@ -16,6 +16,7 @@ body {
     font-family: liquorstore-jazz, sans-serif;
     color: $font-color;
     width: 100%;
+    height: auto;
     overflow: hidden;
 }
 
@@ -27,6 +28,8 @@ header {
 }
 
 .wrapper {
+    margin: 0 auto;
+    padding: 1em;
     div {
         text-align: center;
     }
@@ -37,7 +40,7 @@ header {
     flex-direction: column;
 
     h1 {
-        margin: 1.5em 0 1em;
+        margin: 1em 0 1em;
     }
 }
 
@@ -51,13 +54,13 @@ header {
         top: 100%;
         margin-top: -50px;
         circle {
-            fill: $secondary-color
+            fill: $secondary-color;
         }
     }
 }
 
 .cat-container {
-    margin: 4em 0;
+    margin-bottom: 2em;
 }
 
 .triangles-container {
@@ -75,10 +78,13 @@ header {
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     textarea {
         border: none;
         resize: none;
+        padding: 1em;
+        font-size: 1em;
     }
 }
 
@@ -88,27 +94,37 @@ header {
     border-radius: .5em;
 }
 
-.poem {
+.card {
+    text-align: center;
     p {
         background-color: white;
-
-        // border-radius: ;
+        margin: 0 auto;
+        padding: 1em;
+        line-height: 2em;
     }
 }
 
-.submit, button {
+.btn {
     background: $accent-color;
-        color: white;
-        border: none;
-        border-radius: .2em;
-        font-family: liquorstore-jazz, sans-serif;
-        padding: .2em .4em;
-        font-size: 2em;
-        cursor: pointer;
-        margin-top: 1em;
+    color: white;
+    border: none;
+    border-radius: .2em;
+    font-family: liquorstore-jazz, sans-serif;
+    padding: .2em .4em;
+    font-size: 2em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.secondary {
+    background: $font-color;
 }
 
 @media (min-width: 800px) {
+
+    textarea {
+        font-size: 2em;
+    }
 
     main {
         display: grid;
@@ -122,4 +138,24 @@ header {
     .bongo-cat {
         width: 40vw;
     }
+
+    .circle-container {
+        svg {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .col {
+        display: flex;
+        justify-content: space-evenly;
+        .left {
+            max-width: 500px;
+            h1 {
+                font-size: 4em;
+            }
+        }
+    }
+
 }
