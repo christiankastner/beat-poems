@@ -5,6 +5,12 @@ $font-color: #16394C;
 $secondary-color: #DDA943;
 $accent-color: #D32A2D;
 
+* {
+    margin: none;
+    padding: none;
+    zoom: none;
+}
+
 body {
     background: $base-color;
     font-family: liquorstore-jazz, sans-serif;
@@ -21,7 +27,6 @@ header {
 }
 
 .wrapper {
-    overflow: hidden;
     div {
         text-align: center;
     }
@@ -67,15 +72,27 @@ header {
     }
 }
 
-.input {
+.container {
     display: flex;
     flex-direction: column;
 
     textarea {
         border: none;
-        box-shadow: 5px 5px 3px rgba(0,0,0,.1);
-        width: 90%;
         resize: none;
+    }
+}
+
+.text {
+    width: 90%;
+    box-shadow: 5px 5px 3px rgba(0,0,0,.1);
+    border-radius: .5em;
+}
+
+.poem {
+    p {
+        background-color: white;
+
+        // border-radius: ;
     }
 }
 
@@ -92,8 +109,17 @@ header {
 }
 
 @media (min-width: 800px) {
+
+    main {
+        display: grid;
+        // grid-template-areas: ;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
    
     .bongo-cat {
-        
+        width: 40vw;
     }
 }

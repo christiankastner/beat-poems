@@ -23,11 +23,11 @@ document.addEventListener("submit",(e) => {
 document.addEventListener("DOMContentLoaded", () => {
 
     // SVG resizing
-    window.addEventListener("resize", () => {
-        const circle = get("svg-circle")
-        circle.setAttribute("height", window.innerWidth)
-        console.log(circle.attributes)
-    }, false)
+    // window.addEventListener("resize", () => {
+    //     const circle = get("svg-circle")
+    //     circle.setAttribute("height", window.innerWidth)
+    //     console.log(circle.attributes)
+    // }, false)
 
     get("start-bongos").addEventListener("play", () => {
         bongoFor(2.3)
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     get("read-btn").addEventListener("click", () => {
-        console.log(get("poem").children[0].textContent)
         PoemReader.readPoem(get("poem").children[0].textContent)
     })
     
