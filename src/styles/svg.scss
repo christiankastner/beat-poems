@@ -83,7 +83,7 @@ $accent-color: #D32A2D;
 
 .three {
   right: 20%;
-  top: 10%;
+  top: 5%;
 }
 
 .four {
@@ -92,21 +92,25 @@ $accent-color: #D32A2D;
 }
 
 .five {
-  left: 40%;
+  left: 45%;
+  top: 5%;
 }
 
 .six {
   left: 40%;
   bottom: 30%;
+  z-index: -2;
 } 
 
 .seven {
   left: 25%;
   bottom: 30%;
+  transform: rotate(45deg);
+  display: none;
 }
 
 .eight {
-
+  display: none;
 }
 
 .red {
