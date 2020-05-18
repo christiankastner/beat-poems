@@ -7,28 +7,13 @@ const get = (id) => document.getElementById(id)
 
 const swapper = new NounSwapper();
 
-document.addEventListener("submit",(e) => {
-    e.preventDefault()
-    
-    const poem = get("poem")
-
-    poem.children[0].textContent = swapper.replace(e.target["text-input"].value, ["nn"])
-
-    get("form-container").classList.toggle("seen")
-    poem.classList.toggle("seen")
-})
-
 document.addEventListener("DOMContentLoaded", () => {
-
-    // SVG resizing
-    // window.addEventListener("resize", () => {
-    //     const circle = get("svg-circle")
-    //     circle.setAttribute("height", window.innerWidth)
-    //     console.log(circle.attributes)
-    // }, false)
 
     const readBtn = get("read-btn")
     const stopBtn = get("stop-btn")
+    const resetBtn = get("reset-btn")
+    const poem = get("poem")
+    const form = get("form-container")
 
     get("start-bongos").addEventListener("play", () => {
         bongoFor(2.3)
@@ -42,14 +27,28 @@ document.addEventListener("DOMContentLoaded", () => {
         drumLeft()
     })
 
-    get("read-btn").addEventListener("click", () => {
+    readBtn.addEventListener("click", () => {
         PoemReader.readPoem(get("poem").children[0].textContent)
     })
 
     stopBtn.addEventListener("click", () => {
         PoemReader.killSound()
-        
+    })
+
+    resetBtn.addEventListener("click", () => {
+        poem.children[0].textContent = ""
+
+        form.classList.toggle("seen")
+        poem.classList.toggle("seen")
     })
     
+    document.addEventListener("submit",(e) => {
+        e.preventDefault()
+    
+        poem.children[0].textContent = swapper.replace(e.target["text-input"].value, ["nn"])
+    
+        form.classList.toggle("seen")
+        poem.classList.toggle("seen")
+    })
 })
 

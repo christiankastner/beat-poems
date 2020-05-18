@@ -42,7 +42,7 @@ header {
 }
 
 
-.card + svg {
+.container + svg {
     z-index: -2;
     position: relative;
     overflow: visible;
@@ -81,9 +81,10 @@ header {
 
 .card {
     text-align: center;
+    height: 336px;
     p {
         background-color: white;
-        margin: 0 auto;
+        margin: 4em auto 0;
         padding: 1em;
         line-height: 2em;
         overflow-y: auto;
@@ -105,6 +106,10 @@ header {
 
 .secondary {
     background: $font-color;
+}
+
+.small {
+    font-size: 24px;
 }
 
 @media (min-width: 800px) {
@@ -149,10 +154,10 @@ header {
     }
     .seven {
         display: unset;
-      }
-      
-      .eight {
-        display: unset;
-      }
+    }
+    
+    .eight {
+    display: unset;
+    }
 
 }
