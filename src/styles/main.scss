@@ -10,8 +10,14 @@ body {
     background: $base-color;
     font-family: liquorstore-jazz, sans-serif;
     color: $font-color;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow-x: hidden;
+}
+
+main {
+    height: 100%;
+    overflow: hidden;
 }
 
 header {
@@ -43,8 +49,8 @@ header {
     z-index: -2;
     position: relative;
     overflow: visible;
-    top: -200px;
-    max-height: 900px;
+    top: -100px;
+    max-height: 170px;
 
     circle {
         fill: $secondary-color;
@@ -65,7 +71,7 @@ header {
         border: none;
         resize: none;
         padding: 1em;
-        font-size: 1.25em;
+        font-size: 1em;
     }
 }
 
@@ -111,6 +117,9 @@ header {
 
 @media (min-width: 800px) {
 
+    .bongo-cat {
+        width: 25%;
+    }
 
     textarea {
         font-size: 1em;
@@ -123,10 +132,6 @@ header {
     h1 {
         font-size: 3em;
     }
-   
-    .bongo-cat {
-        width: 40vw;
-    }
 
     .circle-container {
         svg {
@@ -136,6 +141,9 @@ header {
 }
 
 @media (min-width: 1000px) {
+    .bongo-cat {
+        width: 40vw;
+    }
     .col {
         display: flex;
         justify-content: space-evenly;
