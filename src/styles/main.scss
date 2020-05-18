@@ -11,11 +11,13 @@ body {
     font-family: liquorstore-jazz, sans-serif;
     color: $font-color;
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    min-height: 800px;
+    overflow-x: hidden;
 }
 
-
+main {
+    height: 100%;
+}
 
 header {
     height: 3em;
@@ -114,16 +116,13 @@ header {
 
 @media (min-width: 800px) {
 
-    .text {
-        margin-top: 5em;
-    }
 
     textarea {
-        font-size: 2em;
+        font-size: 1em;
     }
      
     p {
-        font-size: 1.25em;
+        font-size: 1em;
     }
 
     h1 {
