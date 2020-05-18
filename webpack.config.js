@@ -54,8 +54,5 @@ module.exports = {
     ],
     node: {
         fs: "empty"
-     },
-    // output: {
-    //     publicPath: "/webpack-demo/",
-    // }
+     }
 }
