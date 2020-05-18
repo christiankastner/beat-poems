@@ -1,6 +1,12 @@
+$base-color: #F4EDC3;
+$font-color: #16394C;
+$secondary-color: #DDA943;
+$accent-color: #D32A2D;
+
 .bongo-cat {
     width: 40%;
     max-width: 350px;
+    margin-bottom: 3em;
     .cls-1, .cls-8, .cls-9 {
         fill: #fff;
       }
@@ -57,4 +63,54 @@
 
 .seen {
     display: none;
+}
+
+.yellow {
+  fill: $secondary-color;
+  position: absolute;
+  z-index: -1;
+}
+
+.one {
+  top: 40%;
+  right: 30%;
+}
+
+.two {
+  right: 45%;
+  top: 30%;
+}
+
+.three {
+  right: 20%;
+  top: 10%;
+}
+
+.four {
+  right: 45%;
+  bottom: 30%;
+}
+
+.five {
+  left: 40%;
+}
+
+.six {
+  left: 40%;
+  bottom: 30%;
+} 
+
+.seven {
+  left: 25%;
+  bottom: 30%;
+}
+
+.eight {
+
+}
+
+.red {
+  fill: $accent-color;
+  position: absolute;
+  z-index: -1;
 }
