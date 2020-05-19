@@ -3,6 +3,7 @@ import NounSwapper from "./NounSwapper"
 import PoemReader from "./PoemReader"
 import { bongoFor, drumRight, drumLeft } from "./BongoCat"
 require("./assets/favicon.png")
+require("./assets/thumbnail.png")
 
 const get = (id) => document.getElementById(id) 
 
